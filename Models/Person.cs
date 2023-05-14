@@ -21,5 +21,13 @@ namespace Directum_Test_Json.Models
         [Required(ErrorMessage = "Поле обязательно к заполнению")]
         [DataType(DataType.Date)]
         public DateOnly BirthDate { get; set; }
+
+        public Person(string LastName, string FirstName, string MiddleName, DateOnly BirthDate)
+        {
+            this.LastName = LastName;
+            this.FirstName = FirstName;
+            this.MiddleName = MiddleName;
+            this.BirthDate = BirthDate;
+        }
     }
 }
